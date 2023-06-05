@@ -1,0 +1,101 @@
+Q1:
+Windows
+Q2:		
+        elems	<10 项>	DataPoint*
+                [0]	@0x1e10bbd8c88	DataPoint
+                [1]	@0x1e10bbd8cb8	DataPoint
+                [2]	@0x1e10bbd8ce8	DataPoint
+                [3]	@0x1e10bbd8d18	DataPoint
+                        _initializationFlag	13451671603782742029	uint64_t
+                        name	<无法访问>	std::string
+                        weight	-4.8366978272229995e-26	double
+                [4]	@0x1e10bbd8d48	DataPoint
+                        _initializationFlag	18369900232523579118	uint64_t
+                        name	<无法访问>	std::string
+                        weight	0.0	double
+                [5]	@0x1e10bbd8d78	DataPoint
+                        _initializationFlag	2066076241416	uint64_t
+                        name	<无法访问>	std::string
+                        weight	0.0	double
+
+Q3:
+           Jackie
+            1951
+        /        \
+      Jermaine  Tito
+        1954      1953
+     /      \
+    Marlon    Michael
+     1957       1958
+-----------------------------------
+           Jackie
+            1951
+        /        \
+      Tito    Jermaine
+      1953      1954
+    /      \
+Michael   Marlon
+ 1958      1957
+-----------------------------------
+            Jackie
+             1951
+        /        \
+      Tito    Jermaine
+      1953      1954
+    /      \
+Marlon    Michael
+ 1957       1958
+
+Q4:
+         T
+         1
+        | |
+       B   G
+       3   2
+      | | | |
+     S  A V  R
+     6  5 9  4
+    | |
+    O K
+    8 7
+
+Q5:
+         G
+         2
+        | |
+       B   R
+       3   4
+      | | | |
+     S  A V K
+     6  5 9 7
+    |
+    O
+    8
+
+Q6:
+    +------+---+---+---+---+---+---+---+---+
+    |unused| G | B | R | S | A | V | K | O |
+    +------+---+---+---+---+---+---+---+---+
+       0     1   2   3   4   5   6   7   8
+
+Q7:
+
+
+
+
+
+
+
+
+
+Q8:
+
+
+
+
+
+
+
+
+
+
