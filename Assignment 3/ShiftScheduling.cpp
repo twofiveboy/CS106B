@@ -7,7 +7,7 @@ using namespace std;
 
 //  maxhours = 10       {7,30} {5,22} {5,22}
 
-Set<Shift> highestValueScheduleForHelper(Set<Shift> shifts,Set<Shift> soFar,int maxHours){  //soFar代表到目前为止的表
+Set<Shift> highestValueScheduleForHelper(Set<Shift> shifts,Set<Shift>& soFar,int maxHours){  //soFar代表到目前为止的表
     if(shifts.size() == 0){
         return soFar;
     }
@@ -23,12 +23,15 @@ Set<Shift> highestValueScheduleForHelper(Set<Shift> shifts,Set<Shift> soFar,int 
         totalLength += lengthOf(i);
     }
     if(totalLength + lengthOf(now) > maxHours) judge = false;
+    shifts -= now;
     //未出现重叠或超时
     if(judge){
         //choose
-        Set<Shift> s1 = highestValueScheduleForHelper(shifts - now,soFar+now,maxHours);
+        soFar += now;
+        Set<Shift> s1 = highestValueScheduleForHelper(shifts,soFar,maxHours);
         //not choose
-        Set<Shift> s2 = highestValueScheduleForHelper(shifts - now,soFar,maxHours);
+        soFar -= now;
+        Set<Shift> s2 = highestValueScheduleForHelper(shifts,soFar,maxHours);
         int sum1 = 0,sum2 = 0;
         for(Shift i:s1) sum1 += valueOf(i);
         for(Shift i:s2) sum2 += valueOf(i);
@@ -36,7 +39,7 @@ Set<Shift> highestValueScheduleForHelper(Set<Shift> shifts,Set<Shift> soFar,int 
     }
     //出现则跳过
     else{
-        return highestValueScheduleForHelper(shifts - now,soFar,maxHours);
+        return highestValueScheduleForHelper(shifts,soFar,maxHours);
     }
 }
 
